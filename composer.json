@@ -11,15 +11,8 @@
       }
     ],
     "require-dev":{
-      "composer/composer":"*@dev",
-      "groall/rabbitmq-http-api-client-php" : "^0.2.2"
+      "composer/composer":"*@dev"
     },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/groall/rabbitmq-http-api-client-php.git"
-      }
-    ],
     "autoload": {
       "files": [
         "registration.php"
