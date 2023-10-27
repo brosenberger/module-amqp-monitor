@@ -1,0 +1,44 @@
+<?php
+    /** @var \BroCode\AmqpMonitor\Block\Adminhtml\QueueListing $block */
+    $queueInfos = $block->getQueues();
+    if (!empty($queueInfos)):
+?>
+<h2><?= __('Queue Information') ?></h2>
+<table class="admin__table-primary dashboard-data">
+    <thead>
+    <tr>
+        <th class="data-grid-th no-link" colspan="4"><?= __('Overview') ?></th>
+        <th class="data-grid-th no-link" colspan="3"><?= __('Messages') ?></th>
+        <th class="data-grid-th no-link" colspan="3"><?= __('Message rates') ?></th>
+    </tr>
+    <tr>
+        <th class="data-grid-th no-link"><?= __('Name') ?></th>
+        <th class="data-grid-th no-link"><?= __('Type') ?></th>
+        <th class="data-grid-th no-link"><?= __('Features') ?></th>
+        <th class="data-grid-th no-link"><?= __('State') ?></th>
+        <th class="data-grid-th no-link"><?= __('Ready') ?></th>
+        <th class="data-grid-th no-link"><?= __('Unacked') ?></th>
+        <th class="data-grid-th no-link"><?= __('Total') ?></th>
+        <th class="data-grid-th no-link"><?= __('incomming') ?></th>
+        <th class="data-grid-th no-link"><?= __('deliver / get') ?></th>
+        <th class="data-grid-th no-link"><?= __('ack') ?></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($queueInfos as $queueInfo): ?>
+        <tr>
+            <td><?= $queueInfo['name'] ?></td>
+            <td><?= $queueInfo['type'] ?></td>
+            <td><?= $queueInfo['durable']?('(D)'):'' ?></td>
+            <td><?= $queueInfo['state'] ?></td>
+            <td><?= $queueInfo['messages_ready'] ?></td>
+            <td><?= $queueInfo['messages_unacknowledged'] ?></td>
+            <td><?= $queueInfo['messages_unacknowledged']+$queueInfo['messages_ready'] ?></td>
+            <td><?= '?' ?></td>
+            <td><?= '?' ?></td>
+            <td><?= '?' ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<?php endif;

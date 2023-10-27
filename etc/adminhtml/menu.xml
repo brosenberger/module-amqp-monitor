@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BroCode_AmqpMontor::monitor" title="BroCode Amqp Montior" module="BroCode_AmqpMonitor" sortOrder="500" action="brocode_amqpmonitor/monitor" resource="BroCode_AmqpMonitor::monitor" parent="Magento_Backend::system_tools" />
+    </menu>
+</config>
