@@ -1,0 +1,22 @@
+<?php
+    /** @var \BroCode\AmqpMonitor\Block\Adminhtml\InformationOverview $block */
+$informationOverview = $block->getInformationOverview();
+    if (!empty($informationOverview)):
+?>
+    <style>
+        .amqp-monitor-tag {
+            display: inline-block;
+            margin: 2px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2px 5px;
+            background: lightgrey;
+        }
+    </style>
+    <div style="margin-bottom: 10px; margin-left: -4px;">
+        <div class="amqp-monitor-tag"><?= $informationOverview['product_name'] . ' ' . $informationOverview['product_version']?></div>
+        <div class="amqp-monitor-tag">Management Version <?= $informationOverview['management_version'] ?></div>
+        <div class="amqp-monitor-tag">Erlang <?= $informationOverview['erlang_version'] ?></div>
+        <div class="amqp-monitor-tag">Cluster name <?= $informationOverview['cluster_name'] ?></div>
+    </div>
+<?php endif;
