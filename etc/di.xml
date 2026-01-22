@@ -1,12 +1,21 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
     <preference for="BroCode\AmqpMonitor\Api\NotificationPublisherInterface" type="BroCode\AmqpMonitor\Model\Notifications\CompositeNotificationPublisher" />
-    <preference for="BroCode\AmqpMonitor\Api\NotificationThresholdValidatorInterface" type="BroCode\AmqpMonitor\Model\DefaultNotificationThresholdValidator"/>
+    <preference for="BroCode\AmqpMonitor\Api\NotificationThresholdValidatorInterface" type="BroCode\AmqpMonitor\Model\ThresholdValidator\CompositeThresholdValidator"/>
 
     <type name="BroCode\AmqpMonitor\Model\Notifications\CompositeNotificationPublisher">
         <arguments>
             <argument name="publishers" xsi:type="array">
                 <item name="email" xsi:type="object">BroCode\AmqpMonitor\Model\Notifications\EmailNotificationPublisher</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="BroCode\AmqpMonitor\Model\ThresholdValidator\CompositeThresholdValidator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="message_growth" xsi:type="object">BroCode\AmqpMonitor\Model\ThresholdValidator\MessageGrowthThresholdValidator</item>
+                <item name="max_message_count" xsi:type="object">BroCode\AmqpMonitor\Model\ThresholdValidator\MaxMessageCountThresholdValidator</item>
             </argument>
         </arguments>
     </type>

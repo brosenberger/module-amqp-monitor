@@ -27,6 +27,34 @@
                     <label>Enable Notification</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+
+                <group id="threshold" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Threshold</label>
+                    <field id="min_message_count" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Minimum Message Count</label>
+                        <comment>Threshold from when a notification might be issued</comment>
+                    </field>
+                    <field id="min_growth_percentage" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Min Growth Percentage</label>
+                        <comment>Minimum growth percentage between two checks to issue a notification (minimum message count must be reached)</comment>
+                    </field>
+                    <field id="alert_message_count" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Alert Message Count</label>
+                        <comment>No matter the other configurations, if this threshold is crossed a notification is issued</comment>
+                    </field>
+                </group>
+
+                <group id="email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>E-Mail</label>
+                    <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable E-Mail Notification</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="recipient" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Notification Mail Recipient</label>
+                        <comment>Comma separated list of email recipients</comment>
+                    </field>
+                </group>
             </group>
         </section>
     </system>

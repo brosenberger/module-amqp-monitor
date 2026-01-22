@@ -37,9 +37,10 @@ class CheckQueueMessageCountCron
         if ($this->scopeConfig->getValue(Constants::CONFIG_NOTIFICATIONS_ENABLED) == false) {
             return;
         }
-        $queueInfos = $this->monitorService->getStoredQueueCounts();
+        $queueInfos = $this->monitorService->getStoredQueueInformations();
+        $newQueueInfos = $this->monitorService->getCurrentQueueInformations();
         foreach ($queueInfos as $queueName => $queueInfo) {
-            $newQueueInfo = $this->monitorService->updateQueueInfo($queueName);
+            $newQueueInfo = $newQueueInfos[$queueName] ?? [];
             if ($this->notificationThresholdValidator->aboveThreshold($queueName, $queueInfo, $newQueueInfo)) {
                 $this->notificationPublisher->publish($queueName, $queueInfo, $newQueueInfo);
             }

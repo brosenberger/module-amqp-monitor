@@ -8,10 +8,10 @@ class CompositeNotificationPublisher implements NotificationPublisherInterface
 {
 
     /** @var NotificationPublisherInterface[] */
-    private ?array $publishers;
+    private array $publishers;
 
     public function __construct(
-        ?array $publishers = []
+        array $publishers = []
     ) {
         $this->publishers = $publishers;
     }
