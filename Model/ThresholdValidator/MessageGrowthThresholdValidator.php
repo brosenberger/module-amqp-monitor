@@ -26,7 +26,7 @@ class MessageGrowthThresholdValidator implements NotificationThresholdValidatorI
 
     protected function aboveGrowthRate($rate, $oldValue, $newValue): bool
     {
-        if ($newValue < $oldValue) {
+        if ($newValue <= $oldValue) {
             // if fewer message return false
             return false;
         }
