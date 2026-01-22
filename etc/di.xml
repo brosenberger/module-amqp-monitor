@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="BroCode\AmqpMonitor\Api\NotificationPublisherInterface" type="BroCode\AmqpMonitor\Model\Notifications\CompositeNotificationPublisher" />
+    <preference for="BroCode\AmqpMonitor\Api\NotificationThresholdValidatorInterface" type="BroCode\AmqpMonitor\Model\DefaultNotificationThresholdValidator"/>
+
+    <type name="BroCode\AmqpMonitor\Model\Notifications\CompositeNotificationPublisher">
+        <arguments>
+            <argument name="publishers" xsi:type="array">
+                <item name="email" xsi:type="object">BroCode\AmqpMonitor\Model\Notifications\EmailNotificationPublisher</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
