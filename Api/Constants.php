@@ -15,5 +15,5 @@ class Constants
     const CONFIG_NOTIFICATIONS_THRESHOLD_ALERTMESSAGECOUNT = 'brocode_amqp/notifications/threshold/alert_message_count';
 
     const CONFIG_NOTIFICATIONS_EMAIL_ENABLED = 'brocode_amqp/notifications/email/enabled';
-    const CONFIG_NOTIFICATIONS_EMAIL_RECIPIENTS = 'brocode_amqp/notifications/email/recipients';
+    const CONFIG_NOTIFICATIONS_EMAIL_RECIPIENTS = 'brocode_amqp/notifications/email/recipient';
 }

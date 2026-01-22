@@ -1,0 +1,12 @@
+<!--@subject {{trans "AMQP Monitoring Notification for Queue \"%queueName\"" queueName=$queueName}} @-->
+<!--@vars {
+"var queueName": "Name of the queue"
+"var queueInformation": "Detailed Information for the Queue"
+} @-->
+
+<h1>{{trans "AMQP Monitoring Notification for Queue \"%queueName\"" queueName=$queueName}}</h1>
+
+<div class="queue-information-wrapper">
+<h3 class="queue-information">{{trans "Queue Informations"}}</h3>
+    <pre>{{var queueInformation|raw}}</pre>
+</div>
