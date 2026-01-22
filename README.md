@@ -23,6 +23,12 @@ bin/magento setup:upgrade
 
 ![Monitor Overview](./docs/amqp_monitor_overview.png)
 
+## Changelog
+
+### 1.1.0
+* add notification possibility to monitor potentially harmful states of the message queues
+
+
 ## TODOs
 
 * Add autoreload of the monitor page to refresh message statistics

@@ -1,7 +1,7 @@
 {
     "name": "brocode/module-amqp-monitor",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Simple Amqp-Monitor for configured Queues",
     "keywords":[ "composer-installer", "magento"],
     "authors": [
