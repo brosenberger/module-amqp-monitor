@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="brocode_amqp" translate="label" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1" >
-            <label>Amqp Monitor</label>
+            <label>BroCode AMQP Monitor</label>
             <tab>service</tab>
             <resource>BroCode_AmqpMonitor::monitor</resource>
             <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">

@@ -13,13 +13,13 @@ bin/magento setup:upgrade
 
 ## Configuration
 
-`` Stores > Configuration > Services > Amqp Monitor ``
+`` Stores > Configuration > Services > BroCode AMQP Monitor ``
 
 ![Configuration](./docs/amqp_configuration.png)
 
 ## Usage
 
-`` System > Tools > BroCode Amqp Monitor ``
+`` System > Tools > BroCode AMQP Monitor ``
 
 ![Monitor Overview](./docs/amqp_monitor_overview.png)
 

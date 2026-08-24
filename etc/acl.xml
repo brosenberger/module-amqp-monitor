@@ -3,7 +3,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="BroCode_AmqpMonitor::monitor" title="BroCode Amqp Monitor" sortOrder="100">
+                <resource id="BroCode_AmqpMonitor::monitor" title="BroCode AMQP Monitor" sortOrder="100">
                 </resource>
             </resource>
         </resources>
