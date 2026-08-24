@@ -1,7 +1,8 @@
 {
     "name": "brocode/module-amqp-monitor",
-    "type": "magento2-module",
     "description": "Simple Amqp-Monitor for configured Queues",
+    "type": "magento2-module",
+    "license": "MIT",
     "keywords": [
         "composer-installer",
         "magento"
@@ -12,8 +13,19 @@
             "email": "bensch.rosenberger@gmail.com"
         }
     ],
-    "require-dev": {
-        "composer/composer": "*@dev"
+    "funding": [
+        {
+            "type": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/brosenberger"
+        }
+    ],
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0",
+        "magento/framework": ">=103.0.0",
+        "magento/module-backend": ">=102.0.0",
+        "magento/module-amqp": ">=100.4.0",
+        "magento/module-config": ">=101.2.0",
+        "magento/module-directory": ">=100.4.0"
     },
     "autoload": {
         "files": [
@@ -22,6 +34,5 @@
         "psr-4": {
             "BroCode\\AmqpMonitor\\": ""
         }
-    },
-    "license": "MIT"
+    }
 }
