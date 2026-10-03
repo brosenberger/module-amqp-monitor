@@ -32,3 +32,7 @@ bin/magento setup:upgrade
 ## TODOs
 
 * Add autoreload of the monitor page to refresh message statistics
+
+---
+
+Docs, background and related modules: [brocode.at](https://brocode.at/modules/module-amqp-monitor/)
